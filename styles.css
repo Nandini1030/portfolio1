@@ -1,107 +1,146 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
 }
 
-header {
-    background-color: mediumaquamarine;
-    color:#fff;
-    padding:10px 20px;
-    text-align:center;
+body{
+background:#f4f4f4;
+color:#333;
 }
 
-header h1 {
-    margin: 0;
+header{
+background:#111;
+color:white;
+padding:15px;
+position:fixed;
+width:100%;
 }
 
-nav {
-    display: flex;
-    justify-content:center;
-    background-color: brown;
-    padding: 10px;
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 15px;
-    padding: 5px 10px;
+.nav-links{
+display:flex;
+list-style:none;
 }
 
-nav a:hover {
-    background-color: #555;
-    border-radius: 5px;
+.nav-links li{
+margin:0 15px;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 20px;
+.nav-links a{
+color:white;
+text-decoration:none;
 }
 
-.about-me {
-    margin-bottom: 40px;
+.menu-toggle{
+display:none;
+font-size:25px;
+cursor:pointer;
 }
 
-.projects {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:linear-gradient(120deg,#4facfe,#00f2fe);
+color:white;
+text-align:center;
 }
 
-.project {
-    text-align: center;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    flex: 1;
+section{
+padding:80px 20px;
+text-align:center;
 }
 
-.project img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
+.card{
+background:white;
+padding:20px;
+margin:20px auto;
+max-width:400px;
+border-radius:10px;
+box-shadow:0 5px 10px rgba(0,0,0,0.1);
 }
 
-.contact-form {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
+.project-container{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
 }
 
-.contact-form label {
-    display: block;
-    margin-bottom: 10px;
+.skill{
+margin:20px auto;
+max-width:400px;
+text-align:left;
 }
 
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.bar{
+background:#ddd;
+height:10px;
+border-radius:20px;
 }
 
-.contact-form button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
+.bar span{
+display:block;
+height:10px;
+background:#4facfe;
+border-radius:20px;
 }
 
-.contact-form button:hover {
-    background-color: #555;
+form{
+display:flex;
+flex-direction:column;
+max-width:400px;
+margin:auto;
 }
 
-footer {
-    background-color: rgb(28, 38, 126);
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
+input,textarea{
+margin:10px 0;
+padding:10px;
+}
+
+button{
+padding:10px;
+background:#4facfe;
+border:none;
+color:white;
+cursor:pointer;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+/* responsive */
+
+@media(max-width:768px){
+
+.nav-links{
+display:none;
+flex-direction:column;
+background:#111;
+position:absolute;
+top:60px;
+right:0;
+width:200px;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+.menu-toggle{
+display:block;
+}
+
 }
